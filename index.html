@@ -1,0 +1,54 @@
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14"></script>
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+<div id="app">
+  <div v-if="currentpage==0">
+  <table id="mainmenu">
+    <tr>
+      <td v-for="n in Col_names.length">
+        {{Col_names[n-1]}}
+      </td>
+    </tr>
+    <tr v-for="n in Row_names.length">
+      <td>{{Row_names[n-1]}}</td>
+      <td v-for="(a, index) in Col_names.length-1">
+        <button v-if="save_exists.includes(Col_names[a].concat(Row_names[n-1]))"
+        class="active"
+        @click="loadMode(Col_names[a].concat(Row_names[n-1]))"
+        >
+          {{"Show saves"}}
+        </button>
+        <button v-else=""
+        class="inactive">
+          {{"No saves :("}}
+        </button>
+      </td>
+    </tr>
+  </table>
+  </div>
+
+  <div  v-if="currentpage==1">
+    <button @click="bakktomenu()" class="active">back</button><br><p>Click on the save name to copy</p>
+    <table>
+      <tbody>
+      <tr v-for="n in howmuch()">
+        <td>
+          <span 
+          @click="navigator.clipboard.writeText(loadedSaves[n-1].string)"
+          :class="{
+            'savename':true,
+            [loadedSaves[n-1].group]:true,
+          }"> 
+          
+          {{loadedSaves[n-1].name}}</span><span class="author">{{" -"+loadedSaves[n-1].author}}</span>
+        </td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+</div>
+</body>

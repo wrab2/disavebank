@@ -1,0 +1,83 @@
+*{
+  color: white;
+  font-family: "Courier" !important;
+}
+body {
+  background-color: black;
+}
+
+#mainmenu {
+  border-spacing: 0px;
+}
+#mainmenu td {
+  display: table-cell;
+  text-align: center;
+  width: 100px;
+  min-width: 100px;
+  height: 50px;
+  border: 1px solid #777777;
+  
+}
+#mainmenu tr {
+  display: table-row;
+  height: 55px;
+}
+#mainmenu button {
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 10px;
+    max-width: 100px;
+    height: 35px;
+    padding: 4px 12px;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.savename{
+  font-size: larger;
+  font-weight: bold;
+  cursor: pointer;
+}
+.author{
+  font-size: medium;
+  font-weight: 400;
+  font-style: italic;
+  margin-left: 10px;
+}
+/*.pre-infinity{}*/
+.infinity {
+  color:#FAC882;
+}
+.elementary{
+  color:#83F7EE;
+}
+.multiverse{
+  color:#9173EF;
+}
+.endgame{
+  color:#d6c102;
+}
+
+
+.active {
+  cursor: pointer;
+  box-shadow: 3px 4px 0px 0px #218a3b;
+  background: linear-gradient(to bottom, #1dc42b 5%, #37f04a 100%);
+  background-color: #1dc42b;
+  border: 1px solid #17cf2c;
+  text-shadow: 0px 1px 0px #057d29;
+}
+#mainmenu .active:hover {
+  background: linear-gradient(to bottom, #37f04a 5%, #1dc42b 100%);
+  background-color: #37f04a;
+}
+.inactive {
+  box-shadow: 3px 4px 0px 0px #4d4d4d;
+  background: linear-gradient(to bottom, #afafaf 5%, #5e5e5e 100%);
+  background-color: #afafaf;
+  border: 1px solid #5e5e5e;
+  text-shadow: 0px 1px 0px #414141;
+  cursor: default;
+}
