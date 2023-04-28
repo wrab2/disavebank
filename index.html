@@ -33,22 +33,19 @@
 
   <div  v-if="currentpage==1">
     <button @click="bakktomenu()" class="active">back</button><br><p>Click on the save name to copy</p>
-    <table>
-      <tbody>
-      <tr v-for="n in howmuch()">
-        <td>
-          <span 
+      <div v-for="n in howmuch()">
+        <span 
           @click="navigator.clipboard.writeText(loadedSaves[n-1].string)"
           :class="{
             'savename':true,
             [loadedSaves[n-1].group]:true,
           }"> 
-          
-          {{loadedSaves[n-1].name}}</span><span class="author">{{" - "+loadedSaves[n-1].author}}</span>
-        </td>
-      </tr>
-    </tbody>
-    </table>
+          {{loadedSaves[n-1].name}}
+        </span>
+        <span class="author">
+          {{" - "+loadedSaves[n-1].author}}
+        </span>
+      </div><br>
   </div>
 </div>
 </body>

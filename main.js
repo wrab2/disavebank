@@ -1,8 +1,8 @@
 const Col_names = ["  ","Normal","Hiker's dream","Extreme","Extreme Dream","Hard","Hard Dream","Absurd","Absurd Dream","Absurd Extreme","Absurd Extereme Dream","Absurd Hard","Absurd Hard Dream"]
-const Row_names = ["Normal","Easy","AAU","AAU Easy","NA","NA Eassy","AAU/NA","AAU/NA Easy"]
+const Row_names = ["Normal","Easy","AAU","AAU Easy","NA","NA Eassy","AAU NA","AAU NA Easy"]
 const groups = ['pre-infinity','infinity','elementary','multiverse']
 //in format Col_namesRow_names
-const save_exists = ["NormalNormal","Hiker's dreamNormal"]
+const save_exists = ["NormalNormal","Hiker's dreamNormal","ExtremeNormal"]
 loadedSaves = [{}]
 function howmuch() {return loadedSaves.length} 
 function bakktomenu(){currentpage=0;loadedSaves = [{}];app.$forceUpdate();}

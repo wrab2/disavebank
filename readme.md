@@ -11,10 +11,10 @@ Example of a file with saves:
 ```
 loadedSaves = [
   {
-  	string: 'save goes here',
-	name: 'Displayed name of a save',
-	group: 'pre-infinity',
-	author:  'who made this save',
+    string: 'save goes here',
+    name: 'Displayed name of a save',
+    group: 'pre-infinity',
+    author:  'who made this save',
   },
   {
 	  ...
