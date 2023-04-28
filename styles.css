@@ -46,9 +46,11 @@ body {
   font-style: italic;
   margin-left: 10px;
 }
-/*.pre-infinity{}*/
+.pre-infinity{
+  color:#a7ff9b
+}
 .infinity {
-  color:#FAC882;
+  color:#fac882;
 }
 .elementary{
   color:#83F7EE;
