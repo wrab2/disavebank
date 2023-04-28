@@ -1,5 +1,5 @@
 ## Don't add every single save out there, only useful ones
-Meaning that if you have save with for example 10 TME there's no need to have a save with 11 TME, 12 TME, 13 TME etc, they all achievable in a few seconds from 10 TME. Same goes for rockets, endorsements and time cubes. 
+Meaning that if you have save with for example 10 TME there's no need to have a save with 11 TME, 12 TME, 13 TME etc, they all achievable in a few seconds from 10 TME. Same goes for rockets, endorsements, time cubes etc. 
 
 ---
 
