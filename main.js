@@ -11,7 +11,8 @@ const save_exists = [ //in format Col_namesRow_names
 "HardNormal",
 "HardNA",
 "Absurd HardNA",
-"Extreme DreamNA"
+"Extreme DreamNA",
+"Hard DreamNA",
 ]
 
 loadedSaves = [{}]
