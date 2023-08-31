@@ -1,5 +1,5 @@
 const Col_names = ["","Normal","Hiker's dream","Extreme","Extreme Dream","Hard","Hard Dream","Absurd","Absurd Dream","Absurd Extreme","Absurd Extereme Dream","Absurd Hard","Absurd Hard Dream"]
-const Row_names = ["Normal","Easy","AAU","AAU Easy","NA","NA Eassy","AAU NA","AAU NA Easy"]
+const Row_names = ["Normal","Easy","AAU","AAU Easy","NA","NA Easy","AAU NA","AAU NA Easy"]
 
 const save_exists = [ //in format Col_namesRow_names
 "NormalNormal",
