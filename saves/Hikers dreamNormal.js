@@ -160,6 +160,6 @@ loadedSaves = [
 	  name: 'v2.0 endgame',
 	  group: 'endgame',
 	  author:  'yyyy',
-  },
+  }
 ]
-app.$forceUpdate()
+showSaves()

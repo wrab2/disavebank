@@ -31,4 +31,4 @@ loadedSaves = [
   },
 
 ]
-app.$forceUpdate()
+showSaves()

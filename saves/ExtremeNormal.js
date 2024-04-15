@@ -156,4 +156,4 @@ loadedSaves = [
     author:  '42069',
   },
 ]
-app.$forceUpdate()
+showSaves()

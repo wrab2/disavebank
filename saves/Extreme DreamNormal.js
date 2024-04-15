@@ -108,4 +108,4 @@ loadedSaves = [
     author:  'pi',
   },
 ]
-app.$forceUpdate()
+showSaves()

@@ -24,9 +24,10 @@ body {
   border-radius: 9px;
   display: flex;
   align-items: center;
+	justify-content: center;
   color: #fff;
   font-size: 10px;
-  max-width: 100px;
+  width: 86px;
   height: 35px;
   padding: 4px 12px;
   text-decoration: none;

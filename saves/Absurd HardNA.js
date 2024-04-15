@@ -6,4 +6,4 @@ loadedSaves = [
     author:  'Water',
   },
 ]
-app.$forceUpdate()
+showSaves()

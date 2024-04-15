@@ -180,5 +180,4 @@ loadedSaves = [
     author: 'downvoid',
   },
 ]
-
-app.$forceUpdate()
+showSaves()

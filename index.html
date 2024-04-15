@@ -1,49 +1,12 @@
 <head>
   <link rel="stylesheet" href="styles.css">
-  <script src="vue_2.7.14.js"></script>
-  <script src="main.js" defer></script>
 </head>
-
 <body>
-<div id="app">
-  <div v-if="currentpage==0">
-  <table id="mainmenu">
-    <tr>
-      <td v-for="n in Col_names">
-        {{n}}
-      </td>
-    </tr>
-    <tr v-for="n in Row_names">
-      <td>{{n}}</td>
-      <td v-for="(a, index) in Col_names.length-1">
-        <button v-if="save_exists.includes(Col_names[a].concat(n))"
-        class="active"
-        @click="loadMode(Col_names[a].concat(n))">
-          {{"Show saves"}}
-        </button>
-        <button v-else="" class="inactive">
-          {{"No saves :("}}
-        </button>
-      </td>
-    </tr>
-  </table>
-  </div>
-
-  <div  v-if="currentpage==1">
-    <button @click="backtomenu()" class="active">back</button><br><p>Click on the save name to copy</p>
-      <div v-for="n in loadedSaves">
-				<button 
-					@click="navigator.clipboard.writeText(n.string)"
-          :class="{
-            'savename':true,
-            [n.group]:true,
-          }"> 
-          {{n.name}}
-        </button>
-        <span class="author">
-          {{" - " + n.author}}
-        </span>
-      </div><br>
-  </div>
-</div>
+	<table id="mainmenu" style="display:table;"></table>
+	<div id="savemenu" style="display:none;">
+		<button onclick="backtomenu()" class="active">back</button><br>
+		<p>Click on the save name to copy</p>
+		<div id="savelist"></div>
+	</div>
 </body>
+<script src="main.js"></script>
