@@ -34,9 +34,11 @@ body {
   margin-right: auto
 }
 .savename {
-  font-size: larger;
+  font-size: 20px;
   font-weight: 700;
-  cursor: pointer
+  cursor: pointer;
+	background-color: transparent;
+	border-color: transparent
 }
 .author {
   font-size: medium;

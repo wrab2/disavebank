@@ -9,21 +9,19 @@
   <div v-if="currentpage==0">
   <table id="mainmenu">
     <tr>
-      <td v-for="n in Col_names.length">
-        {{Col_names[n-1]}}
+      <td v-for="n in Col_names">
+        {{n}}
       </td>
     </tr>
-    <tr v-for="n in Row_names.length">
-      <td>{{Row_names[n-1]}}</td>
+    <tr v-for="n in Row_names">
+      <td>{{n}}</td>
       <td v-for="(a, index) in Col_names.length-1">
-        <button v-if="save_exists.includes(Col_names[a].concat(Row_names[n-1]))"
+        <button v-if="save_exists.includes(Col_names[a].concat(n))"
         class="active"
-        @click="loadMode(Col_names[a].concat(Row_names[n-1]))"
-        >
+        @click="loadMode(Col_names[a].concat(n))">
           {{"Show saves"}}
         </button>
-        <button v-else=""
-        class="inactive">
+        <button v-else="" class="inactive">
           {{"No saves :("}}
         </button>
       </td>
@@ -32,18 +30,18 @@
   </div>
 
   <div  v-if="currentpage==1">
-    <button @click="bakktomenu()" class="active">back</button><br><p>Click on the save name to copy</p>
-      <div v-for="n in howmuch()">
-        <span 
-          @click="navigator.clipboard.writeText(loadedSaves[n-1].string)"
+    <button @click="backtomenu()" class="active">back</button><br><p>Click on the save name to copy</p>
+      <div v-for="n in loadedSaves">
+				<button 
+					@click="navigator.clipboard.writeText(n.string)"
           :class="{
             'savename':true,
-            [loadedSaves[n-1].group]:true,
+            [n.group]:true,
           }"> 
-          {{loadedSaves[n-1].name}}
-        </span>
+          {{n.name}}
+        </button>
         <span class="author">
-          {{" - "+loadedSaves[n-1].author}}
+          {{" - " + n.author}}
         </span>
       </div><br>
   </div>
