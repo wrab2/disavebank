@@ -1,12 +1,17 @@
+<!DOCTYPE html>
 <head>
+	<title>DI save bank</title>
   <link rel="stylesheet" href="styles.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
 	<table id="mainmenu" style="display:table;"></table>
 	<div id="savemenu" style="display:none;">
 		<button onclick="backtomenu()" class="active">back</button><br>
-		<p>Click on the save name to copy</p>
+		<p id="listname"></p>
+		<span>Click on the save name to copy</span>
 		<div id="savelist"></div>
 	</div>
+	</br><a id="sourcelink" style="display:block;" href='https://github.com/wrab2/disavebank'>source code (GitHub)</a>
 </body>
 <script src="main.js"></script>

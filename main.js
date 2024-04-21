@@ -17,8 +17,11 @@ const save_exists = [ //in format Col_namesRow_names
 ]
 
 let loadedSaves = [{}]
+let loadedSavesName = ""
 let currentpage = 0
-function loadMode(url) { //taken from https://jmperezperez.com/blog/ondemand-javascript-lazy-loading-stubs/
+function loadMode(url, savename) { //taken from https://jmperezperez.com/blog/ondemand-javascript-lazy-loading-stubs/
+  loadedSavesName = savename.replace("rs","r's").replace(" Normal","")
+  document.getElementById("listname").textContent = "Loaded saves for "+loadedSavesName+" mode"
   url = "./saves/".concat(url).concat('.js')
   var script = document.createElement('script');
   script.setAttribute('src', url);
@@ -38,13 +41,16 @@ function showSaves(){
 	}
 	document.getElementById("savelist").innerHTML=list
 	document.getElementById("mainmenu").style.display="none"
+	document.getElementById("sourcelink").style.display="none"
 	document.getElementById("savemenu").style.display="block"
 }
 
 function backtomenu(){
 	loadedSaves = [{}]
 	document.getElementById("savelist").textContent=""
-	document.getElementById("mainmenu").style.display="block"
+	document.getElementById("listname").textContent=""
+	document.getElementById("mainmenu").style.display="table"
+	document.getElementById("sourcelink").style.display="block"
 	document.getElementById("savemenu").style.display="none"
 }
 
@@ -59,7 +65,7 @@ for(const r of Row_names){
 	for(let c = 1; c < Col_names.length; c++){
 		table+="<td>"
 		if(save_exists.includes(Col_names[c].concat(r))){
-			table+=`<button class="active" onclick="loadMode('${Col_names[c].concat(r)}')">Show saves</button>`
+			table+=`<button class="active" onclick="loadMode('${Col_names[c].concat(r)}', '${Col_names[c]+" "+r}')">Show saves</button>`
 		} else {
 			table+="<button class='inactive'>No saves</button>"
 		}
