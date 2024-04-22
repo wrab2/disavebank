@@ -2,21 +2,22 @@ const Col_names = ["","Normal","Hikers dream","Extreme","Extreme Dream","Hard","
 const Row_names = ["Normal","Easy","AAU","AAU Easy","NA","NA Easy","AAU NA","AAU NA Easy"]
 
 const save_exists = [ //in format Col_namesRow_names
-"NormalNormal",
-"NormalAAU Easy",
-"Hikers dreamNormal",
-"ExtremeNormal",
-"Extreme DreamNormal",
-"AbsurdNormal",
-"NormalEasy",
-"HardNormal",
-"HardNA",
-"Absurd HardNA",
-"Extreme DreamNA",
-"Hard DreamNA",
+	"Absurd HardNA",
+	"AbsurdNormal",
+	"Extreme DreamNA",
+	"Extreme DreamNormal",
+	"ExtremeNormal",
+	"Hard DreamNA",
+	"HardNA",
+	"HardNormal",
+	"Hikers dreamNormal",
+	"NormalAAU",
+	"NormalAAU Easy",
+	"NormalEasy",
+	"NormalNormal"
 ]
 
-let loadedSaves = [{}]
+let loadedSaves = []
 let loadedSavesName = ""
 let currentpage = 0
 function loadMode(url, savename) { //taken from https://jmperezperez.com/blog/ondemand-javascript-lazy-loading-stubs/
@@ -46,7 +47,7 @@ function showSaves(){
 }
 
 function backtomenu(){
-	loadedSaves = [{}]
+	loadedSaves = []
 	document.getElementById("savelist").textContent=""
 	document.getElementById("listname").textContent=""
 	document.getElementById("mainmenu").style.display="table"
