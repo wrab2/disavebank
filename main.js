@@ -14,6 +14,7 @@ const save_exists = [ //in format Col_namesRow_names
 	"NormalAAU",
 	"NormalAAU Easy",
 	"NormalEasy",
+	"NormalNA",
 	"NormalNormal"
 ]
 
