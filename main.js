@@ -6,6 +6,7 @@ const save_exists = [ //in format Col_namesRow_names
 	"AbsurdNormal",
 	"Extreme DreamNA",
 	"Extreme DreamNormal",
+	"ExtremeNA",
 	"ExtremeNormal",
 	"Hard DreamNA",
 	"HardNA",
@@ -24,7 +25,7 @@ let currentpage = 0
 function loadMode(url, savename) { //taken from https://jmperezperez.com/blog/ondemand-javascript-lazy-loading-stubs/
   loadedSavesName = savename.replace("rs","r's").replace(" Normal","")
   document.getElementById("listname").textContent = "Loaded saves for "+loadedSavesName+" mode"
-  url = "./saves/".concat(url).concat('.js')
+  url = `./saves/${url}.js`
   var script = document.createElement('script');
   script.setAttribute('src', url);
   script.setAttribute('type', 'text/javascript');
